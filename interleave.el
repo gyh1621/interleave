@@ -276,13 +276,7 @@ Consider a headline with property PROPERTY as parent headline."
       (interleave--goto-parent-headline property))))
 
 (defun interleave--goto-search-position ()
-  "Move point to the search start position.
-
-For multi-pdf notes this is the outermost parent headline.  For everything else
-this is the beginning of the buffer."
-  (if interleave-multi-pdf-notes-file
-      (interleave--goto-parent-headline interleave--pdf-prop)
-    (goto-char (point-min))))
+  "Move point to the search start position. Do nothing")
 
 (defun interleave--narrow-to-subtree (&optional force)
   "Narrow buffer to the current subtree.
